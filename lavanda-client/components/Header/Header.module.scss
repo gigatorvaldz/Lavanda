@@ -1,0 +1,31 @@
+@import "@/styles/abstracts";
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .list {
+    display: flex;
+    padding-top: 52px;
+    padding-bottom: 43px;
+
+    & > *:not(:first-child) {
+      margin-left: 70px;
+    }
+
+    li a {
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 31px;
+      letter-spacing: 0em;
+      color: $primary-color-1;
+      @extend %transition;
+
+      &:hover{
+        color: $primary-color-2;
+      }
+
+    }
+  }
+}
