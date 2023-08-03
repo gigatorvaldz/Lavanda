@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 41px;
+  letter-spacing: 0em;
+  text-align: center;
+  padding: 172px 0 59px 0;
+
+  & > * {
+    position: relative;
+    width: 240px;
+  }
+
+  .icon{
+    position: absolute;
+    transform: translateY(-100%) translateX(-50%);
+    left: 50%;
+  }
+
+  .Viber .icon{
+    top: 24px;
+  }
+
+  .Telegram .icon{
+    top: 8px;
+  }
+}
