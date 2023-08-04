@@ -29,3 +29,9 @@
     }
   }
 }
+
+@include maxQ("tablet-s") {
+  .container{
+    display: none;
+  }
+}

@@ -1,0 +1,60 @@
+@import "@/styles/abstracts";
+
+.heading {
+  font-size: 50px;
+  font-weight: 700;
+  color: $primary-color-2;
+  line-height: 68px;
+}
+
+.QuestionsSection {
+  background-color: $primary-color-3;
+  .wrapper {
+    padding: 0 165px 117px 102px;
+    position: relative;
+    .heading {
+      text-align: center;
+      padding: 56px 0 78px 0;
+    }
+
+    .picture {
+      position: absolute;
+      z-index: 0;
+      top: 90px;
+      right: 129px;
+    }
+
+    .questionList {
+      position: relative;
+      z-index: 1;
+
+      & > *:not(:first-child) {
+        margin-top: 20px;
+      }
+
+      .first {
+        max-width: 940px;
+      }
+
+      .second {
+        max-width: 1126px;
+      }
+
+      .third {
+        max-width: 1430px;
+      }
+
+      .fourth {
+        max-width: 1386px;
+      }
+
+      .fifth {
+        max-width: 1408px;
+      }
+
+      .sixth {
+        max-width: 1590px;
+      }
+    }
+  }
+}

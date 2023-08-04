@@ -10,15 +10,15 @@ const Footer = () => {
   return (
     <footer className={css.container}>
       <Link className={css.Viber} href={"/"}>
-        <Image className={css.icon} src={ViberIcon} alt="Viber Icon" />
+        <Image fill className={css.icon} src={ViberIcon} alt="Viber Icon" />
         <span>Viber</span>
       </Link>
       <Link className={css.Telegram} href={"/"}>
-        <Image className={css.icon} src={TelegramIcon} alt="Telegram Icon" />
+        <Image fill className={css.icon} src={TelegramIcon} alt="Telegram Icon" />
         <span>Telegram</span>
       </Link>
       <Link className={css.WhatsApp} href={"/"}>
-        <Image className={css.icon} src={WhatsAppIcon} alt="WhatsApp Icon" />
+        <Image fill className={css.icon} src={WhatsAppIcon} alt="WhatsApp Icon" />
         <span>WhatsApp</span>
       </Link>
     </footer>

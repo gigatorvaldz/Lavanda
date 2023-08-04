@@ -1,0 +1,78 @@
+@import "@/styles/abstracts";
+
+.ServicesSection {
+  background-color: $primary-color-3;
+  padding: 32px 0 106px 0;
+  .wrapper {
+    padding-left: 70px;
+    padding-right: 61px;
+    .heading {
+      text-align: center;
+      margin-bottom: 102px;
+    }
+
+    .serviceContent {
+      display: flex;
+      justify-content: space-between;
+      font-size: 35px;
+      font-weight: 400;
+      line-height: 48px;
+      letter-spacing: 0em;
+      text-align: left;
+
+      strong {
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 48px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+
+      .firstColumn {
+        width: 53.5%;
+        & > p {
+          margin-top: 61px;
+          margin-bottom: 72px;
+        }
+      }
+
+      .secondColumn {
+        width: 43.5%;
+        display: flex;
+        flex-direction: column;
+
+        & > .first {
+          padding: 30px 0 62px 0;
+        }
+
+        & > .second {
+          padding-top: 108px;
+          max-width: 95%;
+        }
+
+        & > .third {
+          padding-top: 69px;
+          align-self: flex-end;
+          max-width: 80%;
+        }
+
+        .pictures {
+          display: flex;
+          height: 37.5%;
+
+          & > *:first-child {
+            align-self: flex-end;
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.heading {
+  font-size: 50px;
+  font-weight: 700;
+  color: $primary-color-2;
+  line-height: 68px;
+}

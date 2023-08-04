@@ -1,3 +1,5 @@
+@import "@/styles/abstracts";
+
 .container {
   display: flex;
   justify-content: center;
@@ -15,17 +17,39 @@
     width: 240px;
   }
 
-  .icon{
+  .icon {
     position: absolute;
     transform: translateY(-100%) translateX(-50%);
     left: 50%;
   }
 
-  .Viber .icon{
+  .Viber .icon {
     top: 24px;
   }
 
-  .Telegram .icon{
+  .Telegram .icon {
     top: 8px;
+  }
+}
+
+@include maxQ("mobile") {
+  .container {
+    font-size: 5px;
+    line-height: 7px;
+
+    .Viber .icon {
+      top: 0;
+      width: 29px;
+      height: 29px;
+    }
+    .WhatsApp .icon {
+      width: 24px;
+      height: 24px;
+    }
+    .Telegram .icon {
+      top: 0;
+      width: 26px;
+      height: 26px;
+    }
   }
 }

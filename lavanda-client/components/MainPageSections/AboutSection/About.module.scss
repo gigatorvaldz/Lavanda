@@ -1,0 +1,83 @@
+@import "@/styles/abstracts";
+
+.AboutSection {
+  background-color: $primary-color-3;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .heading {
+      text-align: center;
+      padding-top: 78px;
+      padding-bottom: 87px;
+    }
+
+    & > div {
+      display: flex;
+    }
+
+    .first {
+      align-items: center;
+      padding: 0 129px;
+
+      .picture {
+        margin-left: 44px;
+      }
+    }
+
+    .second {
+      align-items: center;
+      padding: 0 118px 0 129px;
+      margin-top: 178px;
+
+      .firstpicture {
+        position: relative;
+        top: -156px;
+      }
+
+      .secondpicture {
+        margin-left: 49px;
+        margin-right: 90px;
+      }
+    }
+
+    .third {
+      align-items: center;
+      padding: 0 66px 0 129px;
+      margin-top: 87px;
+
+      .picture {
+        margin-right: 92px;
+      }
+    }
+
+    .fourth {
+      margin-top: 133px;
+      padding: 0 88px 104px 152px;
+
+      .firstpicture {
+        margin-left: 107px;
+        margin-right: 23px;
+      }
+
+      .secondpicture {
+        position: relative;
+        top: -133px;
+      }
+    }
+  }
+}
+
+.heading {
+  font-size: 50px;
+  font-weight: 700;
+  color: $primary-color-2;
+  line-height: 68px;
+}
+
+.content {
+  font-size: 40px;
+  font-weight: 400;
+  color: $primary-color-1;
+}
