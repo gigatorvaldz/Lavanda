@@ -8,6 +8,30 @@
   letter-spacing: 0em;
   text-align: left;
   margin-bottom: 30px;
+
+  @include maxQ("xLarge") {
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 12px;
+  }
+
+  @include maxQ("medium") {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 10px;
+  }
+
+  @include maxQ("tablet-s") {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 7px;
+  }
+
+  @include maxQ("mobile") {
+    font-size: 8px;
+    line-height: 11px;
+    margin-bottom: 5px;
+  }
 }
 
 .list {
@@ -20,9 +44,43 @@
     padding-left: 43px;
 
     background: url("../../assets/listItem.svg") no-repeat left center;
+
+    @include maxQ("xLarge") {
+      font-size: 22px;
+      line-height: 24px;
+    }
+
+    @include maxQ("medium") {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @include maxQ("tablet-s") {
+      font-size: 12px;
+      line-height: 14px;
+
+      padding-left: 9px;
+      background: url("../../assets/ListItemMobile.svg") no-repeat left center;
+    }
+
+    @include maxQ("mobile") {
+      font-size: 8px;
+      line-height: 11px;
+
+      padding-left: 9px;
+      background: url("../../assets/ListItemMobile.svg") no-repeat left center;
+    }
   }
 
-  & >li:not(:first-child){
+  & > li:not(:first-child) {
     margin-top: 10px;
+
+    @include maxQ("xLarge") {
+      margin-top: 3px;
+    }
+
+    @include maxQ("tablet-s") {
+      margin-top: 0px;
+    }
   }
 }
