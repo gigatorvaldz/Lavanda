@@ -72,12 +72,12 @@ const AboutSection = () => {
 
         <div className={css.fourth}>
           <List
-            title="Room cleaning includes:"
+            title="Bathroom cleaning includes:"
             items={[
-              "Dusting surfaces",
-              "Vacuuming or sweeping floor",
-              "Cleaning windows and mirrors",
-              "Making beds and organizing clutter",
+              "Scrubbing and sanitizing surfaces",
+              "Cleaning shower, bathtub, and toilet",
+              "Wiping down mirrors and fixtures",
+              "Mopping or sweeping floor",
             ]}
           />
           <Image

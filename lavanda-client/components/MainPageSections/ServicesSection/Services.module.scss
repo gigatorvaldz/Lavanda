@@ -30,6 +30,7 @@
 
       .firstColumn {
         width: 53.5%;
+
         & > p {
           margin-top: 61px;
           margin-bottom: 72px;
@@ -75,4 +76,317 @@
   font-weight: 700;
   color: $primary-color-2;
   line-height: 68px;
+}
+
+@include maxQ("extraLarge") {
+  .ServicesSection {
+    .wrapper {
+      .serviceContent {
+        .firstColumn {
+          .image {
+            height: 450px;
+          }
+        }
+
+        .secondColumn {
+          .image {
+            height: 300px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include maxQ("xLarge") {
+  .ServicesSection {
+    padding: 28px 0 86px 0;
+
+    .wrapper {
+      padding-left: 60px;
+      padding-right: 60px;
+      .heading {
+        margin-bottom: 70px;
+      }
+
+      .serviceContent {
+        font-size: 25px;
+        line-height: 25px;
+
+        strong {
+          font-size: 25px;
+          line-height: 25px;
+        }
+
+        .firstColumn {
+          .image {
+            height: 420px;
+          }
+
+          & > p {
+            margin-top: 50px;
+            margin-bottom: 62px;
+          }
+        }
+
+        .secondColumn {
+          .image {
+            height: 260px;
+          }
+
+          & > .first {
+            padding: 25px 0 52px 0;
+          }
+
+          & > .second {
+            padding-top: 88px;
+          }
+
+          & > .third {
+            padding-top: 59px;
+          }
+
+          .pictures {
+            & > *:first-child {
+              margin-right: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include maxQ("large") {
+  .ServicesSection {
+    padding: 23px 0 60px 0;
+
+    .wrapper {
+      padding-left: 35px;
+      padding-right: 35px;
+      .heading {
+        margin-bottom: 50px;
+      }
+
+      .serviceContent {
+        font-size: 15px;
+        line-height: 15px;
+
+        strong {
+          font-size: 15px;
+          line-height: 15px;
+        }
+
+        .firstColumn {
+          .image {
+            height: 250px;
+          }
+
+          & > p {
+            margin-top: 40px;
+            margin-bottom: 52px;
+          }
+        }
+
+        .secondColumn {
+          .image {
+            height: 180px;
+          }
+
+          & > .first {
+            padding: 20px 0 42px 0;
+          }
+
+          & > .second {
+            padding-top: 68px;
+          }
+
+          & > .third {
+            padding-top: 49px;
+          }
+
+          .pictures {
+            & > *:first-child {
+              margin-right: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include maxQ("tablet-s") {
+  .ServicesSection {
+    padding: 18px 0 34px 0;
+    .wrapper {
+      padding-left: 16px;
+      padding-right: 16px;
+      .heading {
+        margin-bottom: 34px;
+      }
+
+      .serviceContent {
+        font-size: 12px;
+        line-height: 12px;
+
+        strong {
+          font-size: 12px;
+          line-height: 12px;
+        }
+
+        .firstColumn {
+          .image {
+            height: 140px;
+          }
+
+          & > p {
+            margin-top: 14px;
+            margin-bottom: 16px;
+          }
+        }
+
+        .secondColumn {
+          .image {
+            height: 120px;
+          }
+
+          & > .first {
+            padding: 16px 0 18px 0;
+          }
+
+          & > .second {
+            padding-top: 32px;
+          }
+
+          & > .third {
+            padding-top: 18px;
+          }
+
+          .pictures {
+            & > *:first-child {
+              margin-right: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include maxQ("tablet-ts") {
+  .ServicesSection {
+    background-color: $primary-color-4;
+    padding: 18px 0 34px 0;
+    .wrapper {
+      padding-left: 16px;
+      padding-right: 16px;
+      .heading {
+        margin-bottom: 34px;
+      }
+
+      .serviceContent {
+        font-size: 9px;
+        line-height: 9px;
+
+        strong {
+          font-size: 9px;
+          line-height: 9px;
+        }
+
+        .firstColumn {
+          .image {
+            height: 135px;
+          }
+
+          & > p {
+            margin-top: 14px;
+            margin-bottom: 16px;
+          }
+        }
+
+        .secondColumn {
+          .image {
+            height: 80px;
+          }
+
+          & > .first {
+            padding: 15px 0 16px 0;
+          }
+
+          & > .second {
+            padding-top: 32px;
+          }
+
+          & > .third {
+            padding-top: 16px;
+          }
+
+          .pictures {
+            & > *:first-child {
+              margin-right: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include maxQ("mobile") {
+  .ServicesSection {
+    padding: 14px 0 24px 0;
+    .wrapper {
+      padding-left: 12px;
+      padding-right: 12px;
+      .heading {
+        margin-bottom: 24px;
+      }
+
+      .serviceContent {
+        font-size: 7px;
+        line-height: 10px;
+
+        strong {
+          font-size: 7px;
+          line-height: 10px;
+        }
+
+        .firstColumn {
+          .image {
+            height: 99px;
+          }
+
+          & > p {
+            margin-top: 12px;
+            margin-bottom: 14px;
+          }
+        }
+
+        .secondColumn {
+          .image {
+            height: 72px;
+          }
+
+          & > .first {
+            padding: 12px 0 14px 0;
+          }
+
+          & > .second {
+            padding-top: 22px;
+          }
+
+          & > .third {
+            padding-top: 13px;
+          }
+
+          .pictures {
+            & > *:first-child {
+              margin-right: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
 }

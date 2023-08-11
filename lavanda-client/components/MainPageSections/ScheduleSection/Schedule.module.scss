@@ -1,0 +1,246 @@
+@import "@/styles/abstracts";
+
+.ScheduleSection {
+  color: $primary-color-1;
+  padding: 0 20px;
+  .filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .filterList {
+      display: flex;
+
+      & > *:not(:last-child) {
+        margin-right: 160px;
+      }
+
+      .adress {
+        & > *:last-child {
+          margin-top: 88px;
+        }
+      }
+    }
+
+    .heading {
+      margin-bottom: 33px;
+      margin-top: 27px;
+    }
+
+    .description {
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 54px;
+      letter-spacing: 0em;
+      text-align: center;
+      margin-bottom: 66px;
+    }
+  }
+
+  .schedule {
+    max-width: 1900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+
+    .heading {
+      margin-top: 99px;
+      margin-bottom: 224px;
+    }
+
+    .order {
+      margin-top: 65px;
+    }
+  }
+}
+
+.steps {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 54px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  &:not(.visit)::after {
+    position: absolute;
+    top: 25px;
+    right: -100px;
+    display: block;
+    content: "";
+    width: 32px;
+    height: 32px;
+    background-image: url("../../../assets/arrow.svg");
+  }
+
+  .circle {
+    font-size: 49px;
+    font-weight: 400;
+    line-height: 66px;
+    letter-spacing: 0em;
+    width: 81px;
+    height: 81px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #000;
+    border-radius: 50%;
+
+    margin-right: 30px;
+  }
+
+  margin-bottom: 43px;
+}
+
+@include maxQ("large") {
+  .ScheduleSection {
+    .filter {
+      .filterList {
+        & > *:not(:last-child) {
+          margin-right: 50px;
+        }
+
+        .heading {
+          margin-bottom: 15px;
+          margin-top: 25px;
+        }
+
+        .adress {
+          & > *:last-child {
+            margin-top: 28px;
+          }
+        }
+      }
+
+      .description {
+        font-size: 18px;
+        line-height: 18px;
+
+        margin-bottom: 30px;
+      }
+    }
+
+    .schedule {
+      margin-bottom: 40px;
+
+      .heading {
+        margin-top: 24px;
+        margin-bottom: 84px;
+      }
+
+      .order {
+        margin-top: 24px;
+      }
+    }
+  }
+
+  .steps {
+    font-size: 14px;
+    line-height: 17px;
+
+    &:not(.visit)::after {
+      top: 5px;
+      right: -20px;
+      transform: translateX(100%);
+      width: 7px;
+      height: 7px;
+      background-image: url("../../../assets/arrow-small.svg");
+    }
+
+    .circle {
+      font-size: 14px;
+      line-height: 11px;
+
+      width: 20px;
+      height: 20px;
+
+      border: 1px solid #000;
+      border-radius: 50%;
+
+      margin-right: 6px;
+    }
+
+    margin-bottom: 11px;
+  }
+}
+
+@include maxQ("mobile") {
+  .ScheduleSection {
+    .filter {
+      .filterList {
+        & > *:not(:last-child) {
+          margin-right: 47px;
+        }
+
+        .adress {
+          & > *:last-child {
+            margin-top: 18px;
+          }
+        }
+      }
+
+      .heading {
+        margin-bottom: 5px;
+        margin-top: 13px;
+      }
+
+      .description {
+        font-size: 7px;
+        line-height: 10px;
+
+        margin-bottom: 19px;
+      }
+    }
+
+    .schedule {
+      max-width: 350px;
+      margin-bottom: 20px;
+
+      .heading {
+        margin-top: 14px;
+        margin-bottom: 54px;
+      }
+
+      .order {
+        margin-top: 14px;
+      }
+    }
+  }
+
+  .steps {
+    font-size: 8px;
+    line-height: 11px;
+
+    &:not(.visit)::after {
+      top: 5px;
+      right: -20px;
+      transform: translateX(100%);
+      width: 7px;
+      height: 7px;
+      background-image: url("../../../assets/arrow-small.svg");
+    }
+
+    .circle {
+      font-size: 8px;
+      line-height: 11px;
+
+      width: 14px;
+      height: 14px;
+
+      border: 1px solid #000;
+      border-radius: 50%;
+
+      margin-right: 2px;
+    }
+
+    margin-bottom: 11px;
+  }
+}

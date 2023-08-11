@@ -13,13 +13,13 @@ const ServicesSection = () => {
         <h2 className={css.heading}>Services</h2>
         <div className={css.serviceContent}>
           <div className={css.firstColumn}>
-            <Image src={ServicesPicture1} alt="Clean room picture" />
+              <Image className={css.image} src={ServicesPicture1} alt="Clean room picture" />
             <p>
               We pride ourselves on our reliability and our commitment to
               providing a consistent and{" "}
               <strong>high-quality cleaning experience.</strong>
             </p>
-            <Image src={ServicesPicture2} alt="Clean room picture" />
+              <Image className={css.image} src={ServicesPicture2} alt="Clean room picture" />
           </div>
           <div className={css.secondColumn}>
             <p className={css.first}>
@@ -28,8 +28,8 @@ const ServicesSection = () => {
               thoroughly and efficiently.
             </p>
             <div className={css.pictures}>
-              <Image src={ServicesPicture3} alt="Clean room picture" />
-              <Image src={ServicesPicture4} alt="Clean room picture" />
+              <Image className={css.image} src={ServicesPicture3} alt="Clean room picture" />
+              <Image className={css.image} src={ServicesPicture4} alt="Clean room picture" />
             </div>
             <p className={css.second}>
               Our cleaning plans are tailored to meet{" "}
