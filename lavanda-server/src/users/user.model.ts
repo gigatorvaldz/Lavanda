@@ -1,11 +1,13 @@
-import { Column, Table, DataType, Model, HasMany } from "sequelize-typescript"
+import { Column, Table, DataType, Model, HasMany, AllowNull, HasOne } from "sequelize-typescript"
+import { Code } from "src/code/code.model";
 
 interface UserCreationAttrs {
     email: string
     password: string;
-    name: string;
+    firstName: string;
     lastName: string;
     phone: string;
+    birthDay: Date;
 }
 
 @Table({ tableName: "users" })
@@ -21,7 +23,7 @@ export class User extends Model<User, UserCreationAttrs> {
     email: string;
 
     @Column({ type: DataType.STRING, allowNull: false })
-    name: string;
+    firstName: string;
 
     @Column({ type: DataType.STRING, allowNull: false })
     lastName: string;
@@ -29,4 +31,9 @@ export class User extends Model<User, UserCreationAttrs> {
     @Column({ type: DataType.TEXT, allowNull: false, unique: true })
     phone: string;
 
+    @Column({ type: DataType.DATE, allowNull: false })
+    birthDay: Date;
+
+    @HasOne(() => Code)
+    code: Code;
 }

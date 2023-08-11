@@ -6,12 +6,17 @@ import { ConfigModule } from '@nestjs/config';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { configuration } from 'configuration';
 import { AuthModule } from './auth/auth.module';
+import { User } from './users/user.model';
+import { MailModule } from './mail/mail.module';
+import { CodeModule } from './code/code.module';
+import { Code } from './code/code.model';
 
 @Module({
-  imports: [UsersModule, ConfigModule.forRoot({
-    envFilePath: `${process.cwd()}/.${process.env.NODE_ENV}.env`,
-    load: [configuration]
-  }),
+  imports: [
+    ConfigModule.forRoot({
+      envFilePath: `${process.cwd()}/.${process.env.NODE_ENV}.env`,
+      load: [configuration]
+    }),
     SequelizeModule.forRoot({
       dialect: 'postgres',
       host: process.env.POSTGRES_HOST,
@@ -19,11 +24,15 @@ import { AuthModule } from './auth/auth.module';
       username: process.env.POSTGRES_USERNAME,
       password: process.env.POSTGRES_PASSWORD,
       database: process.env.POSTGRES_DB,
-      models: [],
+      models: [User, Code],
       synchronize: true,
       autoLoadModels: true
     }),
-    AuthModule,],
+    UsersModule,
+    AuthModule,
+    MailModule,
+    CodeModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })

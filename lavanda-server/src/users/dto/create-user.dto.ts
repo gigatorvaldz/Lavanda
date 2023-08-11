@@ -1,4 +1,4 @@
-import { IsString, Length, IsEmail } from "class-validator";
+import { IsString, IsEmail, IsDateString } from "class-validator";
 
 export class CreateUserDto {
 
@@ -7,7 +7,16 @@ export class CreateUserDto {
     readonly email: string;
 
     @IsString({ message: "Should be string" })
-    @Length(4, 16, { message: "Should be chars: 4 < password < 16" })
     readonly password: string;
 
+    @IsString({ message: "Should be string" })
+    readonly firstName: string;
+
+    @IsString({ message: "Should be string" })
+    readonly lastName: string;
+
+    readonly phone: string;
+
+    @IsDateString({}, { message: "Invalid date" })
+    readonly birthDay: Date;
 }
