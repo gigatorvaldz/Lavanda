@@ -13,10 +13,6 @@
       color: $primary-color-2;
     }
 
-    // &:active {
-    //   color: black;
-    // }
-
     .label {
       font-size: 40px;
       font-weight: 600;
@@ -47,8 +43,103 @@
     padding-left: 62px;
     margin-top: 6px;
 
-    &.active{
+    &.active {
       margin-bottom: 50px;
+    }
+  }
+}
+
+@include maxQ("xLarge") {
+  .container {
+    .controls {
+      .label {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 55px;
+        letter-spacing: 0em;
+
+        padding-left: 62px;
+      }
+
+      & > *:not(:first-child) {
+        margin-left: 10px;
+      }
+    }
+
+    .children {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 48px;
+
+      padding-left: 62px;
+      margin-top: 6px;
+
+      &.active {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+@include maxQ("tablet-s") {
+  .container {
+    .controls {
+      .label {
+        font-size: 14px;
+        line-height: 20px;
+
+        padding-left: 12px;
+        background: url("../../assets/questionicon-small.svg") no-repeat left
+          center;
+      }
+
+      & > *:not(:first-child) {
+        margin-left: 10px;
+      }
+    }
+
+    .children {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 11px;
+      
+      padding-left: 12px;
+      margin-top: 6px;
+
+      &.active {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+@include maxQ("mobile") {
+  .container {
+    .controls {
+      .label {
+        font-size: 9px;
+        line-height: 12px;
+
+        padding-left: 12px;
+        background: url("../../assets/questionicon-small.svg") no-repeat left
+          center;
+      }
+
+      & > *:not(:first-child) {
+        margin-left: 10px;
+      }
+    }
+
+    .children {
+      font-size: 8px;
+      line-height: 11px;
+      
+      padding-left: 12px;
+      margin-top: 6px;
+
+      &.active {
+        margin-bottom: 14px;
+      }
     }
   }
 }

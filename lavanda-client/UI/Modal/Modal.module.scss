@@ -1,0 +1,79 @@
+@import "@/styles/abstracts";
+
+.background {
+  z-index: 10;
+  width: 100vw;
+  min-height: 100%;
+  position: fixed;
+  top: 0px;
+  font-size: 15px;
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  .wrapper {
+    background-color: $primary-color-3;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    // overflow-x: hidden;
+    // overflow-y: auto;
+    width: 37.5%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 27px;
+
+    @include maxQ("medium") {
+      width: 45%;
+      border-radius: 20px;
+      padding: 18px;
+    }
+
+    @include maxQ("tablet-s") {
+      width: 53%;
+      border-radius: 14px;
+      padding: 14px;
+    }
+
+
+    @include maxQ("mobile") {
+      width: 58.5%;
+      border-radius: 9px;
+      padding: 8px;
+    }
+
+    .children {
+      width: 100%;
+    }
+
+    .close {
+      align-self: flex-end;
+      cursor: pointer;
+
+      @include maxQ("medium") {
+        width: 25px;
+        height: 25px;
+      }
+
+      @include maxQ("tablet-s") {
+        width: 15px;
+        height: 15px;
+      }
+
+      @include maxQ("mobile") {
+        width: 9px;
+        height: 9px;
+      }
+    }
+  }
+}

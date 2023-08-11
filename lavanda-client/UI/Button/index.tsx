@@ -6,12 +6,19 @@ const openSans = Open_Sans({ subsets: ["latin"] });
 
 interface ButtonI {
   children: React.ReactNode;
-  //   onClick: (e: React.MouseEvent) => void;
+  onClick?: (e: React.MouseEvent) => void;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
 }
 
-const Button = ({ children }: ButtonI) => {
+const Button = ({ children, onClick, type = "button", disabled = false }: ButtonI) => {
   return (
-    <button className={classNames(css.container, openSans.className)}>
+    <button
+      type={type}
+      disabled={disabled}
+      onClick={onClick}
+      className={classNames(css.container, openSans.className)}
+    >
       {children}
     </button>
   );

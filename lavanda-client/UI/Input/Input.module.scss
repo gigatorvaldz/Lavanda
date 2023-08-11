@@ -1,0 +1,116 @@
+@import "@/styles/abstracts";
+
+.form {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 18px 13px;
+
+  border-radius: 10px;
+
+  background-color: #fff;
+
+  @include maxQ("medium") {
+    padding: 12px 10px;
+    font-size: 18px;
+    border-radius: 8px;
+  }
+
+  @include maxQ("tablet-s") {
+    padding: 8px 9px;
+    font-size: 14px;
+    border-radius: 6px;
+  }
+
+  @include maxQ("mobile") {
+    padding: 5px 4px;
+    font-size: 8px;
+    border-radius: 4px;
+  }
+
+  & * {
+    @include onHover() {
+      cursor: pointer;
+    }
+  }
+
+  &.active * {
+    @include onHover() {
+      cursor: text;
+    }
+  }
+}
+
+.searchBar {
+  background-color: #fff;
+  font-size: 25px;
+
+  @include maxQ("tablet-s") {
+    font-size: 18px;
+  }
+
+  @include maxQ("tablet-s") {
+    font-size: 14px;
+  }
+
+  @include maxQ("mobile") {
+    font-size: 8px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.label {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.iconContainer {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  height: 100%;
+  padding-right: 30px;
+
+  color: #c72121;
+
+  background: url("../../assets/invalidIcon.svg") no-repeat right center;
+
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0em;
+  text-align: right;
+
+  display: grid;
+  align-items: center;
+  justify-items: center;
+
+  @include maxQ("tablet-s") {
+    background: url("../../assets/invalidIcon-small.svg") no-repeat right center;
+    padding-right: 13px;
+    font-size: 14px;
+  }
+
+  @include maxQ("tablet-s") {
+    font-size: 9px;
+  }
+
+  @include maxQ("mobile") {
+    font-size: 7px;
+  }
+}
+
+.invalid {
+  .placeholder {
+    color: #c72121;
+  }
+  input {
+    color: #c72121;
+  }
+}

@@ -4,29 +4,12 @@
   padding: 18px 47px;
   width: max-content;
 
-  background: linear-gradient(
-      273.79deg,
-      rgba(224, 221, 206, 0.7) 29.51%,
-      rgba(224, 221, 206, 0) 94.72%
-    ),
-    linear-gradient(
-      275.07deg,
-      rgba(240, 237, 223, 0.2) 5.97%,
-      rgba(255, 255, 255, 0.17) 76.79%
-    ),
-    linear-gradient(0deg, #f0eee4, #f0eee4);
-
+  background-color: #F0EEE4;
   border-radius: 10px;
-  border: 1px solid;
-  border-image-source: linear-gradient(
-    273.79deg,
-    rgba(224, 221, 206, 0.7) 29.51%,
-    rgba(224, 221, 206, 0) 94.72%
-  );
 
-  box-shadow: 4px 4px 6px 0px #0000004d;
-  box-shadow: -4px -4px 6px 0px #ffffff;
-  box-shadow: 4px 4px 6px 0px #ffffff59 inset;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(3, 3, 3, 0.2), -9px -9px 14px -5px rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(3, 3, 3, 0.2), -9px -9px 14px -5px rgba(255, 255, 255, 0.5);
+  box-shadow: 4px 4px 8px 0px rgba(3, 3, 3, 0.2),-9px -9px 14px -5px rgba(255, 255, 255, 0.5);
 
   color: $primary-color-1;
   font-size: 40px;

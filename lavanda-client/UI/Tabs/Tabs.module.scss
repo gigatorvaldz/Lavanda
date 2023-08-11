@@ -1,0 +1,89 @@
+@import "@/styles/abstracts";
+
+.container {
+  & > *:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .tab {
+    cursor: pointer;
+    background-color: #ededed;
+
+    @extend %transition;
+
+    padding: 13px 68px;
+
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 41px;
+    text-align: center;
+    border-radius: 10px;
+
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(3, 3, 3, 0.2),
+      4px 4px 8px 0px rgba(255, 255, 255, 0.2) inset;
+    -moz-box-shadow: 4px 4px 8px 0px rgba(3, 3, 3, 0.2),
+      4px 4px 8px 0px rgba(255, 255, 255, 0.2) inset;
+    box-shadow: 4px 4px 8px 0px rgba(3, 3, 3, 0.2),
+      4px 4px 8px 0px rgba(255, 255, 255, 0.2) inset;
+
+    &:hover {
+      background-color: #cccccc;
+    }
+
+    &:active {
+      background-color: #fff;
+
+      -webkit-box-shadow: 5px 5px 5px -5px rgba(3, 3, 3, 0.2) inset,
+        -5px -5px 5px -5px rgba(3, 3, 3, 0.2) inset;
+      -moz-box-shadow: 5px 5px 5px -5px rgba(3, 3, 3, 0.2) inset,
+        5px -5px 5px -5px rgba(3, 3, 3, 0.2) inset;
+      box-shadow: 5px 5px 5px -5px rgba(3, 3, 3, 0.2) inset,
+        -5px -5px 5px -5px rgba(3, 3, 3, 0.2) inset;
+    }
+  }
+
+  .active.tab {
+    background-color: #fff;
+
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(3, 3, 3, 0.2) inset,
+      -5px -5px 5px -5px rgba(3, 3, 3, 0.2) inset;
+    -moz-box-shadow: 5px 5px 5px -5px rgba(3, 3, 3, 0.2) inset,
+      5px -5px 5px -5px rgba(3, 3, 3, 0.2) inset;
+    box-shadow: 5px 5px 5px -5px rgba(3, 3, 3, 0.2) inset,
+      -5px -5px 5px -5px rgba(3, 3, 3, 0.2) inset;
+  }
+}
+
+@include maxQ("xLarge") {
+  .container {
+    & > *:not(:last-child) {
+      margin-bottom: 7px;
+    }
+
+    .tab {
+      padding: 13px 23px;
+
+      font-size: 14px;
+      line-height: 8px;
+
+      gap: 5px;
+      border-radius: 3px;
+    }
+  }
+}
+
+@include maxQ("mobile") {
+  .container {
+    & > *:not(:last-child) {
+      margin-bottom: 7px;
+    }
+
+    .tab {
+      padding: 3px 13px;
+      border-radius: 3px;
+
+      font-size: 6px;
+      line-height: 8px;
+    }
+  }
+}
