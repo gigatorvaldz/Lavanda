@@ -7,6 +7,8 @@ import AboutSection from "@/components/MainPageSections/AboutSection";
 import AdvantagesSection from "@/components/MainPageSections/AdvantagesSection";
 import ServicesSection from "@/components/MainPageSections/ServicesSection";
 import QuestionsSection from "@/components/MainPageSections/QuestionsSection";
+import ScheduleSection from "@/components/MainPageSections/ScheduleSection";
+import AboutSectionMobile from "@/components/MainPageSections/AboutSectionMobile";
 
 export const metadata: Metadata = {
   title: "Lavanda - Main Page",
@@ -19,10 +21,12 @@ export default function Home() {
       <main className={css.container}>
         <HomeSection />
         <OfferSection />
-        {/* <AboutSection />
+        <AboutSection />
+        <AboutSectionMobile />
         <AdvantagesSection />
         <ServicesSection />
-        <QuestionsSection /> */}
+        <ScheduleSection />
+        <QuestionsSection />
       </main>
     </Layout>
   );
