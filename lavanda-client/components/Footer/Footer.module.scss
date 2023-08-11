@@ -32,10 +32,38 @@
   }
 }
 
+@include maxQ("tablet-s") {
+  .container {
+    padding: 82px 0 39px 0;
+    font-size: 16px;
+
+    & > * {
+      position: relative;
+      width: 100%;
+    }
+
+    .Viber .icon {
+      top: 0;
+      width: 40px;
+      height: 40px;
+    }
+    .WhatsApp .icon {
+      width: 40px;
+      height: 40px;
+    }
+    .Telegram .icon {
+      top: 0;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
 @include maxQ("mobile") {
   .container {
     font-size: 5px;
     line-height: 7px;
+    padding: 42px 0 29px 0;
 
     .Viber .icon {
       top: 0;
@@ -53,3 +81,4 @@
     }
   }
 }
+
