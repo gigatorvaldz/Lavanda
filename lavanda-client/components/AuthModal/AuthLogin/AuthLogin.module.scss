@@ -1,0 +1,51 @@
+@import "@/styles/abstracts";
+@import "../AuthModal.module.scss";
+
+.container {
+  .form {
+    & > *:not(:first-child, .button) {
+      margin-top: 13px;
+
+      @include maxQ("medium") {
+        margin-top: 9px;
+      }
+
+      @include maxQ("tablet-s") {
+        margin-top: 6px;
+      }
+
+      @include maxQ("mobile") {
+        margin-top: 4px;
+      }
+    }
+  }
+}
+
+.reset {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27px;
+  align-self: flex-start;
+
+  transition: 0.3s ease-in-out;
+
+  @include maxQ("medium") {
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  @include maxQ("tablet-s") {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  @include maxQ("mobile") {
+    font-size: 7px;
+    line-height: 10px;
+  }
+
+  &:hover {
+    color: #3030304d;
+  }
+}

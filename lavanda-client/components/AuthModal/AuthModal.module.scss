@@ -1,0 +1,114 @@
+@import "@/styles/abstracts";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .heading {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    margin-top: 46px;
+    margin-bottom: 45px;
+
+    
+    @include maxQ("medium") {
+      font-size: 18px;
+      line-height: 20px;
+
+      margin-bottom: 36px;
+      margin-top: 34px;
+    }
+
+    @include maxQ("tablet-s") {
+      font-size: 14px;
+      line-height: 16px;
+
+      margin-bottom: 26px;
+      margin-top: 24px;
+    }
+
+    @include maxQ("mobile") {
+      font-size: 9px;
+      line-height: 12px;
+
+      margin-bottom: 14px;
+      margin-top: 14px;
+    }
+  }
+
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 89px;
+
+
+    @include maxQ("medium") {
+      padding: 0 54px;
+    }
+
+    @include maxQ("tablet-s") {
+      padding: 0 48px;
+    }
+
+    @include maxQ("mobile") {
+      padding: 0 28px;
+    }
+
+    width: 100%;
+
+    .invisible {
+      display: none;
+    }
+
+    .button {
+      margin-top: 50px;
+      margin-bottom: 130px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include maxQ("medium") {
+        margin-top: 36px;
+        margin-bottom: 80px;
+      }
+
+      @include maxQ("tablet-s") {
+        margin-top: 26px;
+        margin-bottom: 60px;
+      }
+
+      @include maxQ("mobile") {
+        margin-top: 16px;
+        margin-bottom: 40px;
+      }
+    }
+
+    & > div {
+      width: 100%;
+    }
+
+    & > div > *:not(:first-child) {
+      margin-top: 13px;
+
+      @include maxQ("medium") {
+        margin-top: 9px;
+      }
+
+      @include maxQ("mobile") {
+        margin-top: 6px;
+      }
+
+      @include maxQ("mobile") {
+        margin-top: 4px;
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+@import "@/styles/abstracts";
+
+.dropdown {
+  top: -10px;
+  margin: 0;
+  transform: translateY(-100%);
+  border-radius: 13px;
+  background-color: #fff;
+  
+  @include maxQ("medium") {
+    font-size: 18px !important;
+    width: 250px !important;
+    max-height: 180px !important;
+    & > * {
+      padding: 8px 10px !important;
+    }
+  }
+
+  @include maxQ("tablet-s") {
+    font-size: 14px !important;
+    width: 200px !important;
+    max-height: 170px !important;
+    & > * {
+      padding: 6px 8px !important;
+    }
+  }
+
+  @include maxQ("mobile") {
+    font-size: 8px !important;
+    width: 160px !important;
+    max-height: 150px !important;
+    & > * {
+      padding: 4px 6px !important;
+    }
+  }
+}
+
+.button {
+  border: 0 !important;
+  background-color: #fff !important;
+  border-radius: 10px !important;
+}
+
+.container {
+  border: 0 !important;
+  background-color: #fff !important;
+  padding: 15px 0;
+  border-radius: 10px !important;
+
+  @include maxQ("medium") {
+    padding: 0px 0;
+    border-radius: 8px !important;
+  }
+
+  @include maxQ("tablet-s") {
+    padding: 0px 0;
+    border-radius: 6px !important;
+  }
+
+  @include maxQ("mobile") {
+    padding: 0px 0;
+    border-radius: 3px !important;
+  }
+}
+
+.input {
+  border: 0 !important;
+  background-color: #fff !important;
+  width: 100% !important;
+  font-size: 25px !important;
+
+  @include maxQ("medium") {
+    font-size: 18px !important;
+    height: 53px !important;
+  }
+
+  @include maxQ("tablet-s") {
+    font-size: 14px !important;
+    height: 33px !important;
+  }
+
+  @include maxQ("mobile") {
+    font-size: 8px !important;
+    height: 21px !important;
+  }
+}
+
+.invisible {
+  display: none;
+}
