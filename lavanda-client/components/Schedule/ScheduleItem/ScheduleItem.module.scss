@@ -1,0 +1,44 @@
+@import "@/styles/abstracts";
+
+.item {
+  cursor: pointer;
+  background-color: #e8e8e8;
+  opacity: 0.8;
+  width: 60%;
+  justify-self: center;
+  border-radius: 10px;
+
+  -webkit-box-shadow: 5px 5px 11px -4px rgba(3, 3, 3, 0.3),
+    -5px -5px 5px -5px rgba(255, 255, 255, 0.6) inset;
+  -moz-box-shadow: 5px 5px 11px -4px rgba(3, 3, 3, 0.3),
+    -5px -5px 5px -5px rgba(255, 255, 255, 0.6) inset;
+  box-shadow: 5px 5px 11px -4px rgba(3, 3, 3, 0.3),
+    -5px -5px 5px -5px rgba(255, 255, 255, 0.6) inset;
+
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #e0e0e0;
+  }
+}
+
+@include maxQ("large") {
+  .item {
+    border-radius: 5px;
+  }
+}
+
+
+@include maxQ("mobile") {
+  .item {
+    border-radius: 3px;
+
+    -webkit-box-shadow: 3px 3px 6px -4px rgba(3, 3, 3, 0.3),
+      -3px -3px 3px -3px rgba(255, 255, 255, 0.6) inset;
+    -moz-box-shadow: 3px 3px 6px -4px rgba(3, 3, 3, 0.3),
+      -3px -3px 3px -3px rgba(255, 255, 255, 0.6) inset;
+    box-shadow: 3px 3px 6px -4px rgba(3, 3, 3, 0.3),
+      -3px -3px 3px -3px rgba(255, 255, 255, 0.6) inset;
+
+  }
+}

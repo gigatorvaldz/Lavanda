@@ -1,0 +1,75 @@
+@import "@/styles/abstracts";
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: $primary-color-1;
+  background-color: #f0eee4;
+
+  padding: 8px 70px;
+  border-radius: 10px;
+
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 33px;
+
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(3, 3, 3, 0.2),
+    4px 4px 8px 0px rgba(255, 255, 255, 0.2) inset;
+  -moz-box-shadow: 4px 4px 8px 0px rgba(3, 3, 3, 0.2),
+    4px 4px 8px 0px rgba(255, 255, 255, 0.2) inset;
+  box-shadow: 4px 4px 8px 0px rgba(3, 3, 3, 0.2),
+    4px 4px 8px 0px rgba(255, 255, 255, 0.2) inset;
+
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #d6d5d0;
+  }
+
+  &:active {
+    background-color: #fff;
+
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(3, 3, 3, 0.2) inset,
+      -5px -5px 5px -5px rgba(3, 3, 3, 0.2) inset;
+    -moz-box-shadow: 5px 5px 5px -5px rgba(3, 3, 3, 0.2) inset,
+      5px -5px 5px -5px rgba(3, 3, 3, 0.2) inset;
+    box-shadow: 5px 5px 5px -5px rgba(3, 3, 3, 0.2) inset,
+      -5px -5px 5px -5px rgba(3, 3, 3, 0.2) inset;
+  }
+
+  &:disabled {
+    background-color: #949494;
+    cursor: not-allowed;
+  }
+}
+
+@include maxQ("xLarge") {
+  .container {
+    padding: 13px 23px;
+
+    font-size: 14px;
+    line-height: 8px;
+    border-radius: 3px;
+  }
+}
+
+@include maxQ("tablet-s") {
+  .container {
+    padding: 10px 18px;
+
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+
+@include maxQ("mobile") {
+  .container {
+    padding: 3px 24px;
+    border-radius: 2px;
+
+    font-size: 7px;
+    line-height: 10px;
+  }
+}

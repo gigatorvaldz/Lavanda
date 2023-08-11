@@ -1,0 +1,171 @@
+@import "@/styles/abstracts";
+
+.dropDown {
+  position: relative;
+  width: 100%;
+}
+
+.dropDown__title {
+  cursor: pointer;
+
+  background-color: #ededed;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(3, 3, 3, 0.2),
+    4px 4px 8px 0px rgba(255, 255, 255, 0.2) inset;
+  -moz-box-shadow: 4px 4px 8px 0px rgba(3, 3, 3, 0.2),
+    4px 4px 8px 0px rgba(255, 255, 255, 0.2) inset;
+  box-shadow: 4px 4px 8px 0px rgba(3, 3, 3, 0.2),
+    4px 4px 8px 0px rgba(255, 255, 255, 0.2) inset;
+
+  color: $primary-color-1;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 41px;
+  text-align: center;
+
+  &:hover {
+    background-color: #cccccc;
+  }
+
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  padding: 13px 68px;
+  border-radius: 10px;
+  @extend %transition;
+}
+
+.dropDown__title.opened {
+  background-color: #fff;
+
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(3, 3, 3, 0.2) inset,
+    -5px -5px 5px -5px rgba(3, 3, 3, 0.2) inset;
+  -moz-box-shadow: 5px 5px 5px -5px rgba(3, 3, 3, 0.2) inset,
+    5px -5px 5px -5px rgba(3, 3, 3, 0.2) inset;
+  box-shadow: 5px 5px 5px -5px rgba(3, 3, 3, 0.2) inset,
+    -5px -5px 5px -5px rgba(3, 3, 3, 0.2) inset;
+}
+
+.arrowDown {
+  width: 2rem;
+  height: 2rem;
+  transition: transform ease-in-out 0s;
+}
+
+.arrowDown.opened {
+  // animation: 1s ease-in-out open;
+  transform: rotate(180deg);
+}
+
+.dropDown__contentWrapper {
+  position: absolute;
+  z-index: 1000;
+  min-width: 100%;
+  padding-top: 0.4rem;
+
+  bottom: 0;
+  transform: translateY(calc(100%));
+
+  @extend %transition;
+}
+
+.dropDown__content {
+  background-color: #ededed;
+
+  padding: 0.8rem 0;
+  border-radius: 0.5rem;
+
+  @extend %transition;
+}
+
+.dropDown__options {
+  & > li {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 25px;
+    width: 100%;
+    min-height: 3.6rem;
+    padding: 0 1.5rem;
+
+    color: $primary-color-1;
+  }
+}
+
+@include maxQ("xLarge") {
+  .dropDown__title {
+    padding: 13px 23px;
+
+    font-size: 14px;
+    line-height: 8px;
+    
+
+    gap: 5px;
+    border-radius: 3px;
+  }
+
+  .arrowDown {
+    width: 12px;
+    height: 12px;
+    transition: transform ease-in-out 0s;
+  }
+
+  .dropDown__contentWrapper {
+    padding-top: 0.1rem;
+  }
+
+  .dropDown__content {
+    padding: 0.2rem 0;
+    border-radius: 0.1rem;
+  }
+
+  .dropDown__options {
+    & > li {
+      gap: 2px;
+      font-size: 6px;
+      width: 100%;
+      min-height: 15px;
+      padding: 0 5px;
+    }
+  }
+}
+
+@include maxQ("mobile") {
+  .dropDown__title {
+    font-size: 6px;
+    line-height: 8px;
+
+    gap: 5px;
+    padding: 3px 13px;
+    border-radius: 3px;
+  }
+
+  .arrowDown {
+    width: 5px;
+    height: 5px;
+    transition: transform ease-in-out 0s;
+  }
+
+  .dropDown__contentWrapper {
+    padding-top: 0.1rem;
+  }
+
+  .dropDown__content {
+    padding: 0.2rem 0;
+    border-radius: 0.1rem;
+  }
+
+  .dropDown__options {
+    & > li {
+      gap: 2px;
+      font-size: 6px;
+      width: 100%;
+      min-height: 15px;
+      padding: 0 5px;
+    }
+  }
+}
+
